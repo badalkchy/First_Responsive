@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <!--Fonts-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Responsive Navbar</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#"><span>Logo</span>Site</a>
+            </div>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" class="action_btn">Get started</a>
+            <div class="toggle_btn">
+                 <i class="fa-solid fa-bars"></i>  <!--bar icon from fatching live from fontawasome-->
+            </div>
+        </nav>
+        <div class="drop_menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="action_btn">Get started</a></li>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <h1>Welcome</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis quasi distinctio excepturi voluptas consectetur praesentium incidunt voluptates ratione dolor ullam expedita quam aperiam quia ipsa numquam, eos aut asperiores modi!</p>
+        </section>
+    </main>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleButIcon = document.querySelector('.toggle_btn i')
+        const DropMenu = document.querySelector('.drop_menu')
+
+        toggleBtn.addEventListener('click', function(){
+            DropMenu.classList.toggle('open')
+            const isOpen = DropMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-bars'
+            : 'fas fa-times';
+        });
+
+    </script>
+</body>
+
+</html>
